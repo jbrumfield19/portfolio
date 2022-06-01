@@ -1,0 +1,242 @@
+:root{
+    --maincolor:#eaeaea;
+    --secColor:#fff;
+
+    --borderColor:#c1c1c1;
+
+    --maintext: black;
+    --sectext: #4b5156;
+
+    --themeDotBorder: #24292e;
+
+    --previewBg:rgb(251, 249, 243, 0.8);
+	--previewShadow:#f0ead6;
+
+
+	--buttonColor:black;
+
+}
+html, body{
+    padding: 0;
+    margin: 0;
+}
+h1, h2, h3, h4,h5, h6, strong{
+color: var(--maintext);
+font-family: 'Russo One', sans-serif;
+font-weight: 500;
+}
+p,  li, span, label, input, textarea{
+color: var(--sectext);
+font-family: 'Roboto Mono', monospace;
+}
+a{
+    text-decoration: none;
+    color:#17a2b8;
+
+}
+ul{
+    list-style: none;
+}
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+.s1{
+    background-color: var(--maincolor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+.s2{
+    background-color: var(--seccolor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.gwrap{
+    display: grid;
+    text-align: center;
+    align-content: center;
+    min-height: 10em;
+}
+.iwrap{
+    background-color: var(--secColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    grid-template-areas: 
+        'nwrap nwrap' 
+        'lcol rcol'
+        
+    ;
+}
+.nwrap{
+    border-radius: 5px 5px 0 0;
+    grid-area: nwrap;
+    border-bottom: 1px solid var(--borderColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--maincolor);
+}
+#dnav{
+    margin: 0;
+    padding: 10px;
+}
+#dnav li{
+   display: inline-block;
+   margin-right: 5px;
+   margin-left: 5px;
+}
+
+
+.dwrap{
+display: flex;
+padding: 10px;
+}
+#d1{
+    background-color: #fc6058;
+}
+#d2{
+    background-color: #fec02f;
+}
+#d3{
+    background-color: #2aca3e;
+}
+.bdot{
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+.lcol{
+    grid-area: lcol;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+#pfp{
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: 2px solid var(--borderColor);
+}
+#theme-options-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.theme-dot{
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 50%;
+
+    margin: 5px;
+    border: 2px solid var(--themeDotBorder);
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+    cursor: pointer;
+}
+.theme-dot:hover{
+border-width: 5px;
+}
+#l-mode{
+    background-color: #fff;
+}
+#b-mode{
+    background-color: #192734;
+}
+#g-mode{
+    background-color: #78866b;
+}
+#p-mode{
+    background-color: #7E4C74;
+}
+#setnote{
+    font-size: 12px;
+    font-style: italic;
+}
+.rcol{
+    grid-area: rcol;
+    display: grid;
+    align-content: center;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#pshadow{
+    background-color: var(--previewShadow);
+    max-width: 300px;
+    height: 180px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+#preview{
+  width: 300px;
+  border: 1.5px solid #17a2b8;  background-color: var(--previewBg);
+  padding: 15px;
+  position: relative ;
+}
+.corner{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid #17a2b8;
+    background-color: #fff;
+    position: absolute;
+}
+#ctl{
+top: -5px;
+left: -5px;
+}
+#ctr{
+    top: -5px;
+    right: -5px;
+    
+}
+#cbl{
+    bottom: -5px;
+    left: -5px;
+    
+}
+#cbr{
+    bottom: -5px;
+    right: -5px;
+    
+}
+@media screen and (max-width: 1200px) {
+    .main-container{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 800px){
+	.iwrap{
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			'nwrap'
+			'lcol'
+			'rcol'
+		;
+	}
+
+	.rcol{
+		justify-content: center;
+	}
+
+}
